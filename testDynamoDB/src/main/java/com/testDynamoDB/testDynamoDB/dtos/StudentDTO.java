@@ -1,21 +1,21 @@
 package com.testDynamoDB.testDynamoDB.dtos;
 
 public class StudentDTO {
-    private String studentId;
+    private Long studentId;
     private String firstName;
     private String lastName;
 
     public StudentDTO() {}
 
-    public StudentDTO(String studentId, String firstName, String lastName) {
+    public StudentDTO(Long studentId, String firstName, String lastName) {
         this.studentId = studentId;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public String getStudentId() { return studentId; }
+    public Long getStudentId() { return studentId; }
 
-    public void setStudentId(String studentId) { this.studentId = studentId; }
+    public void setStudentId(Long studentId) { this.studentId = studentId; }
 
     public String getFirstName() { return firstName; }
 

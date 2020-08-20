@@ -11,6 +11,7 @@ import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 
 @Configuration
 public class DynamoDbConfig {
@@ -45,4 +46,5 @@ public class DynamoDbConfig {
     public DynamoDBMapper mapper() {
         return new DynamoDBMapper(amazonDynamoDB());
     }
+    
 }

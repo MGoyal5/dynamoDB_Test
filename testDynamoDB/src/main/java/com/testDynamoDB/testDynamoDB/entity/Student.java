@@ -2,7 +2,7 @@ package com.testDynamoDB.testDynamoDB.entity;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
-@DynamoDBTable(tableName = "student")
+@DynamoDBTable(tableName = "Student")
 public class Student {
 	
 	
@@ -16,6 +16,7 @@ public class Student {
 	@DynamoDBAttribute
     private String lastName;
 
+	
     public Student(){}
 
     public Student(Long studentId, String firstName, String lastName) {

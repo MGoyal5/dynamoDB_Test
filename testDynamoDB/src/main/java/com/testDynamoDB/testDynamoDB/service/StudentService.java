@@ -2,8 +2,6 @@ package com.testDynamoDB.testDynamoDB.service;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig.SaveBehavior;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
 import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 import com.amazonaws.services.dynamodbv2.document.Item;
@@ -12,7 +10,6 @@ import com.amazonaws.services.dynamodbv2.document.UpdateItemOutcome;
 import com.amazonaws.services.dynamodbv2.document.spec.DeleteItemSpec;
 import com.amazonaws.services.dynamodbv2.document.spec.GetItemSpec;
 import com.amazonaws.services.dynamodbv2.document.spec.UpdateItemSpec;
-import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
 import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import com.amazonaws.services.dynamodbv2.model.ReturnValue;
 import com.testDynamoDB.testDynamoDB.dtos.StudentDTO;
@@ -30,7 +27,8 @@ public class StudentService {
     @Autowired
     private DynamoDBMapper mapper;
     
-    @Autowired AmazonDynamoDB amazonDynamoDB;
+    @Autowired 
+    private AmazonDynamoDB amazonDynamoDB;
     
     //converting from entity to DTO
     public StudentDTO convertDto(Student student){
